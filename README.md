@@ -17,7 +17,7 @@ For the grand opening of the bridge in Spring 2022, the department wanted to hav
 
 A figure of the main menu with the bridge model is below. Each page has a tag that contains the name of the student(s) who came up with the original conceptual idea. 
 
-<img src="readme_imgs/main_menu.JPG" alt="Interface main menu with the bridge model" width="400"/>
+<img src="readme_imgs/main_menu.JPG" alt="Interface main menu with the bridge model" width="800"/>
 
 
 ## Project Functionalities & Development Process
@@ -26,11 +26,11 @@ First, I used LearnOpenGL as a reference and implemented basic functions such as
 
 Next, I added a game loop and the ability for the user to "fly" around the bridge to look at different views. The game loop checks for user input and processes it. If the user hits the "Escape" key, then the program will close. If the user hits a certain button on the screen, then the program will change states to that page. Additionally, the user can "fly" around the bridge by hitting the "W", "A", "S", and "D" keys, and move the camera around with the arrow keys at the same time. There is also a way to zoom in with the "E" key and zoom out with the "Q" key. The game loop also sets different variables for the shader and renders the desired graphics. A screenshot of the interface after the user has flown around to the end of the bridge is shown below.
 
-<img src="readme_imgs/camera_movement.JPG" alt="Interface after the user has flown to the end of the bridge" width="400"/>
+<img src="readme_imgs/camera_movement.JPG" alt="Interface after the user has flown to the end of the bridge" width="800"/>
 
 Then, I added the ability to load and render a 3D model using LearnOpenGL as a reference and added the different graphics for the various states. Due to the time contraints of this project, all of the states, except for the main page, consist of an image with photos of the information desired and buttons that go to other states. One can add different buttons to each state and change the main texture. The main page renders a 3D model of the bridge that the user can "fly" around and has a variety of buttons at the bottom that lead to the various informational pages. A screenshot of one of the informational pages can be found below.
 
-<img src="readme_imgs/education.JPG" alt="An example of an informational page" width="400"/>
+<img src="readme_imgs/education.JPG" alt="An example of an informational page" width="800"/>
 
 Afterwards, I added the ability to update the color and displacement of the model based on the values from the accelerometers. The color is a heatmap based on the sensor value: blue is a lower value and red is a higher value. The displacement of the model is represented by moving the vertices of the model. Since the sensor locations do not match the vertex locations, the sensor values are interpolated to find the value at the vertices. Then, these values are used to determine the color and how much to move the vertex. The color values are determined by taking the min and max value over the whole bridge and interpolating the color for each vertex based on the vertex's value. For this project, I created artificial values for the sensors due to the duration of the project.
 
